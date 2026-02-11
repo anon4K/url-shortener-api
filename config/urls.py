@@ -15,8 +15,29 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.http import JsonResponse
+from shortener.models import URL
+
+def redirect_short_url(request, short_code):
+    try:
+        url = URL.objects.get(short_code=short_code)
+        url.clicks += 1
+        url.save()
+        return JsonResponse({
+            'success': True,
+            'original_url': url.original_url,
+            'clicks': url.clicks
+        })
+    except URL.DoesNotExist:
+        return JsonResponse({
+            'success': False, 
+            'error': 'Short URL not found'}, 
+            status=404)
+        
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('shortener.urls')),
+    path('<str:short_code>/', redirect_short_url, name='redirect_short_url'),
 ]
