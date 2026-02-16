@@ -1,8 +1,8 @@
-🔗 URL Shortener API
+# 🔗 URL Shortener API
 
 A production-ready URL shortener with Django REST Framework, Redis caching, and custom aliases.
 
-✨ Features
+## ✨ Features
 
 - URL shortening with auto-generated or custom codes
 - Click tracking and analytics
@@ -10,7 +10,7 @@ A production-ready URL shortener with Django REST Framework, Redis caching, and 
 - Input validation and duplicate detection
 - REST API with full CRUD operations
 
-🚀 Live Demo
+## 🚀 Live Demo
 
 **API:** [Your deployed URL here]
 
@@ -20,34 +20,36 @@ Django REST Framework • PostgreSQL • Redis
 
 📦 Quick Start
 
-Clone and setup
+# Clone and setup
 git clone https://github.com/anon4K/url-shortener-api.git
 cd url-shortener-api
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
-Database setup
+# Database setup
 python manage.py migrate
 python manage.py createsuperuser
 
-Run (make sure Redis is running)
+# Run (make sure Redis is running)
 python manage.py runserver
-
+```
 
 Visit `http://localhost:8000/api/urls/`
 
 ## 🔌 API Usage
 
-Create URL (auto-generated code):
-
+**Create URL (auto-generated code):**
+```bash
 POST /api/urls/
 {"original_url": "https://example.com"}
-
+```
 
 **Create URL (custom code):**
+```bash
 POST /api/urls/
 {"original_url": "https://example.com", "custom_code": "mylink"}
+```
 
 **Access short URL:**
 ```bash
