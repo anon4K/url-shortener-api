@@ -10,7 +10,7 @@ class URLViewSet(viewsets.ModelViewSet):
     serializer_class = URLSerializer
     
     def get_serializer_class(self):
-        if self.action == 'create':
+        if self.action == 'create' or self.action == 'shorten':
             return URLCreateSerializer
         return URLSerializer
     
