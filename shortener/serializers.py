@@ -41,4 +41,5 @@ class URLCreateSerializer(serializers.ModelSerializer):
         if custom_code:
             validated_data['short_code'] = custom_code
 
-            return URL.objects.create(**validated_data)
+        url = URL.objects.create(**validated_data)
+        return url
