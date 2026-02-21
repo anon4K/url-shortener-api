@@ -2,7 +2,7 @@
 
 A production-ready URL shortener with Django REST Framework, Redis caching, and custom aliases.
 
-## ✨ Features
+## Features
 
 - URL shortening with auto-generated or custom codes
 - Click tracking and analytics
@@ -10,15 +10,15 @@ A production-ready URL shortener with Django REST Framework, Redis caching, and 
 - Input validation and duplicate detection
 - REST API with full CRUD operations
 
-## 🚀 Live Demo
+## Live Demo
 
 **API:** [Your deployed URL here]
 
-🛠️ Tech Stack
+Tech Stack
 
 Django REST Framework • PostgreSQL • Redis
 
-📦 Quick Start
+## Quick Start
 
 # Clone and setup
 git clone https://github.com/anon4K/url-shortener-api.git
@@ -56,7 +56,7 @@ POST /api/urls/
 GET /{short_code}/
 ```
 
-## 📝 Key Features Implementation
+## Key Features Implementation
 
 **Redis Caching:**
 ```python
@@ -72,7 +72,7 @@ if cached:
 - Duplicate detection
 - Format validation
 
-## 🔮 Roadmap
+## Roadmap
 
 - [ ] QR code generation
 - [ ] Analytics dashboard
@@ -81,12 +81,8 @@ if cached:
 
 ## 👨‍💻 Author
 
-**Your Name** - [LinkedIn](https://linkedin.com/in/yourprofile) • [GitHub](https://github.com/yourusername)
-
-Part of my **#BuildInPublic** journey: 10 backend projects in 8 weeks.
-
-**Next Project:** Email Verification & OTP System
+**Michael Offordum** - [LinkedIn](https://www.linkedin.com/in/michael-offordum-3057a6240/) • [GitHub](https://github.com/anon4K)
 
 ---
 
-⭐ Star this repo if you found it helpful!
+Please star this repo if you found it helpful. Thank you!
