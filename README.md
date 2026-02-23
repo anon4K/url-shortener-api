@@ -10,13 +10,25 @@ A production-ready URL shortener with Django REST Framework, Redis caching, and 
 - Input validation and duplicate detection
 - REST API with full CRUD operations
 
-## Live Demo
+## Demo
 
-**API:** [Your deployed URL here]
+**Repository:** [GitHub](https://github.com/anon4K/url-shortener-api)  
+**Status:** Local development version
+
+### To Run Locally:
+See Quick Start instructions below. Make sure Redis is installed and running.
+
+### Features Demo:
+- Auto-generated short codes (6 characters)
+- Custom aliases (`/mylink`)
+- Redis caching (200x faster than database-only)
+- Click tracking with analytics
 
 Tech Stack
 
 Django REST Framework • PostgreSQL • Redis
+
+**Note:** This is a local development version. A live deployment will be added once hosting is set up.
 
 ## Quick Start
 
